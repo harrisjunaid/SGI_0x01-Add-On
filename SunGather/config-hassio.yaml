@@ -74,6 +74,7 @@ exports:
         device_class: running
         payload_on: "ON"
         payload_off: "OFF"
+
       - name: "Temperature"
         sensor_type: sensor
         register: internal_temperature
@@ -81,35 +82,48 @@ exports:
         state_class: measurement
 
       - name: "Daily Running Time"
-        sensor_type: sensor
+        sensor_type: holding_register
         register: daily_running_time
         device_class: timestamp
         state_class: measurement
+        unit_of_measurement: "h"
         icon: "mdi:clock-outline"
+
       - name: "Daily Generation"
         sensor_type: sensor
         register: daily_power_yields
         device_class: energy
-        state_class: total_increasing
+        state_class: measurement
         icon: "mdi:solar-power"
+
       - name: "Monthly Power Yields"
         sensor_type: sensor
         register: monthly_power_yields
         device_class: energy
         state_class: total_increasing
         icon: "mdi:solar-power"
+
       - name: "Total Running Time"
-        sensor_type: sensor
+        sensor_type: holding_register
         register: total_running_time
         device_class: timestamp
         state_class: measurement
+        unit_of_measurement: "h"
         icon: "mdi:clock-outline"
-      - name: "Total Active Power"
+
+      - name: "Total Power Yields"
         sensor_type: sensor
-        register: total_active_power
+        register: total_power_yields
         dev_class: power
-        state_class: measurement
+        state_class: total_increasing
         icon: "mdi:solar-power"
+
+#      - name: "Total Active Power"
+#        sensor_type: sensor
+#        register: total_active_power
+#        dev_class: power
+#        state_class: measurement
+#        icon: "mdi:solar-power"
 #      - name: "Daily Export to Grid"
 #        sensor_type: sensor
 #        register: daily_export_to_grid
