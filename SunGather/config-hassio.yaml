@@ -83,7 +83,6 @@ exports:
 
       - name: "Daily Running Time"
         register: daily_running_time
-        value_template: "{{ value_json.daily_running_time }}"
         device_class: "timestamp"
         icon: "mdi:clock-outline"
         name: "Daily Running Time"
@@ -107,7 +106,6 @@ exports:
 
       - name: "Total Running Time"
         register: total_running_time
-        value_template: "{{ value_json.total_running_time }}"
         device_class: "timestamp"
         icon: "mdi:clock-outline"
         name: "Total Running Time"
