@@ -36,7 +36,7 @@ class export_mqtt(object):
     def configure(self, config, inverter):
         # 1) Retrive inverter model and serial number
         self.model = inverter.getInverterModel(True) # Get Model method in inverter 
-        #self.serial_number = inverter.getSerialNumber() # Get Serial Number
+        #self.serial_number = inverter.getSerialNumber() # Get Serial Number below in get_valid_serial_number
         # Assuming a valid serial number is non-empty and not None
         def get_valid_serial_number(inverter):
             serial_number = None

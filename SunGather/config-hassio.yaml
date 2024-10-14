@@ -104,9 +104,9 @@ exports:
         device_class: timestamp
         state_class: measurement
         icon: "mdi:clock-outline"
-      - name: "Total Active Power"
+      - name: "Total Power Yields"
         sensor_type: sensor
-        register: total_active_power
+        register: total_power_yields
         dev_class: power
         state_class: measurement
         icon: "mdi:solar-power"
