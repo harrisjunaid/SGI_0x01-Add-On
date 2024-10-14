@@ -85,7 +85,6 @@ exports:
         register: daily_running_time
         device_class: "timestamp"
         icon: "mdi:clock-outline"
-        name: "Daily Running Time"
         state_class: "measurement"
         unit_of_measurement: "h"
         icon: "mdi:clock-outline"
@@ -108,7 +107,6 @@ exports:
         register: total_running_time
         device_class: "timestamp"
         icon: "mdi:clock-outline"
-        name: "Total Running Time"
         state_class: "measurement"
         unit_of_measurement: "h"
         icon: "mdi:clock-outline"

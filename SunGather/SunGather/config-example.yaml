@@ -82,11 +82,11 @@ exports:
         state_class: measurement
 
       - name: "Daily Running Time"
-        sensor_type: input  # This should be either holding/input register, depending on your device
         register: daily_running_time
-        device_class: duration
-        value_template: "{{ value_json }}"
-        state_class: total_increasing
+        device_class: "timestamp"
+        icon: "mdi:clock-outline"
+        state_class: "measurement"
+        unit_of_measurement: "h"
         icon: "mdi:clock-outline"
 
       - name: "Daily Generation"
@@ -104,12 +104,11 @@ exports:
         icon: "mdi:solar-power"
 
       - name: "Total Running Time"
-        sensor_type: input  # This should be either holding/input register, depending on your device
-        register: total_running_time        # Replace 'total_running_time' with the actual register number
-        device_class: duration
+        register: total_running_time
+        device_class: "timestamp"
+        icon: "mdi:clock-outline"
+        state_class: "measurement"
         unit_of_measurement: "h"
-        value_template: "{{ value_json }}"
-        state_class: total_increasing
         icon: "mdi:clock-outline"
 
       - name: "Total Power Yields"
