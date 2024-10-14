@@ -45,6 +45,7 @@ class export_mqtt(object):
                 if serial_number:
                     logging.info(f"Valid serial number received: {serial_number}")
                 else:
+                    # write code for waiting for a valid serial number
                     logging.info("Invalid serial number, retrying...")
             return serial_number
         self.serial_number = get_valid_serial_number(inverter)

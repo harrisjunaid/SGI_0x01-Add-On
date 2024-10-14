@@ -82,7 +82,7 @@ exports:
         state_class: measurement
 
       - name: "Daily Running Time"
-        sensor_type: holding_register
+        sensor_type: holding
         register: daily_running_time
         device_class: timestamp
         state_class: measurement
@@ -104,7 +104,7 @@ exports:
         icon: "mdi:solar-power"
 
       - name: "Total Running Time"
-        sensor_type: holding_register
+        sensor_type: holding
         register: total_running_time
         device_class: timestamp
         state_class: measurement
