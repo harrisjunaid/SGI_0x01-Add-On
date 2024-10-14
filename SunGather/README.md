@@ -1,1 +1,1 @@
-SunGrow Inverter 0x02
+SunGrow Inverter 0x01
