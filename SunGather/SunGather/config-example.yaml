@@ -84,10 +84,10 @@ exports:
       - name: "Daily Running Time"
         sensor_type: holding  # This should be either holding/input register, depending on your device
         register: daily_running_time
-        data_type: uint16      # Specify the data type (optional, depends on the data format)
         device_class: duration
-        unit_of_measurement: "min"
-        state_class: measurement
+        unit_of_measurement: "h"
+        value_template: "{{ value_json }}"
+        state_class: total_increasing
         icon: "mdi:clock-outline"
 
       - name: "Daily Generation"
@@ -107,9 +107,9 @@ exports:
       - name: "Total Running Time"
         sensor_type: holding  # This should be either holding/input register, depending on your device
         register: total_running_time        # Replace 'total_running_time' with the actual register number
-        data_type: uint16      # Specify the data type (optional, depends on the data format)
         device_class: duration
-        unit_of_measurement: "min"
+        unit_of_measurement: "h"
+        value_template: "{{ value_json }}"
         state_class: total_increasing
         icon: "mdi:clock-outline"
 
