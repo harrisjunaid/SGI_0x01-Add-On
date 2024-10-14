@@ -83,11 +83,12 @@ exports:
 
       - name: "Daily Running Time"
         register: daily_running_time
+        value_template: "{{ value_json.daily_running_time }}"
         device_class: "timestamp"
         icon: "mdi:clock-outline"
-        name: "Total Running Time"
+        name: "Daily Running Time"
         state_class: "measurement"
-        unit_of_measurement: "min"
+        unit_of_measurement: "h"
         icon: "mdi:clock-outline"
 
       - name: "Daily Generation"
@@ -105,6 +106,7 @@ exports:
         icon: "mdi:solar-power"
 
       - name: "Total Running Time"
+        register: total_running_time
         value_template: "{{ value_json.total_running_time }}"
         device_class: "timestamp"
         icon: "mdi:clock-outline"
