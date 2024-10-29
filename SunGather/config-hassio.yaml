@@ -86,14 +86,14 @@ exports:
         register: daily_running_time
         device_class: duration
         state_class: measurement
-        unit_of_measurement: "h"
+        unit_of_measurement: "min"
         icon: "mdi:clock-outline"
 
       - name: "Daily Generation"
         sensor_type: sensor
         register: daily_power_yields
         device_class: energy
-        state_class: measurement
+        state_class: total
         icon: "mdi:solar-power"
 
       - name: "Monthly Power Yields"
